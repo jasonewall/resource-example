@@ -1,0 +1,27 @@
+<div class="hero-unit">
+  <h1>Cheerio!</h1>
+  <p>You have the following products defined.</p>
+  <ul>
+    <li ng-repeat="product in products">{{product.product_name}} [{{product.easy_ship_price}}, {{product.base_price}}]</li>
+  </ul>
+  <p>Happy Selling</p>
+
+  <section>
+    <h1>Add New Product</h1>
+    <form ng-submit="create()">
+      <p>
+        <label for="product_name">Product Name:</label>
+        <input type="text" name="product_name" ng-model="newProduct.product_name"/>
+      </p>
+      <p>
+        <label for="base_price">Base Price:</label>
+        <input type="text" name="base_price" ng-model="newProduct.base_price"/>
+      </p>
+      <p>
+        <label for="easy_ship_price">Easy Ship Price:</label>
+        <input type="text" name="easy_ship_price" ng-model="newProduct.easy_ship_price"/>
+      </p>
+      <button type="submit">Save</button>
+    </form>
+  </section>
+</div>
